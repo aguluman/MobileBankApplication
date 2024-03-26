@@ -18,33 +18,49 @@
     under the License.
 -->
 <html lang="GB">
-    <head>
-        <meta charset="utf-8">
-        <!--
-        Customize this policy to fit your own applications needs. For more guidance, please refer to the docs:
-            https://cordova.apache.org/docs/en/latest/
-        Some notes:
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts to mitigate the risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">The Device is Ready</p>
-            </div>
-        </div>
-        <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
-    </body>
+<head>
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' data: gap: https://code.jquery.com
+https://ssl.gstatic.com https://apisandbox.openbankproject.com 'unsafe-eval'; style-src 'self' code.jquery.com 'unsafe-inline'; media-src *; img-src 'self' code.jquery.com data: content:;">
+    <!--
+    Customize this policy to fit your own applications needs. For more guidance, please refer to the docs:
+        https://cordova.apache.org/docs/en/latest/
+    Some notes:
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts to mitigate the risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' data: gap: https://code.jquery.com https://ssl.gstatic.com https://apisandbox.openbankproject.com 'unsafe-eval';
+    style-src 'self' code.jquery.com 'unsafe-inline'; media-src *;
+    img-src 'self' code.jquery.com data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Financial Application</title>
+</head>
+<body>
+<div class="app">
+    <h1>Financial Application</h1>
+    <div id="deviceready" class="blink">
+        <p class="event listening">Connecting to Device</p>
+        <p>
+            <button id="button1">Sign in</button>
+        <p id="text1"></p>
+        <button id="button2">Retrieve Bank User Data at gh.29.uk Bank</button>
+        <p id="text2"></p>
+        <button id="button3">Fetch List Accounts A User Holds At A Banks</button>
+        <p id="text3"></p>
+        <button id="button4">Fetch Bank with Account-Id of 1995</button>
+        <p id="text4"></p>
+        <p class="event received">The Device is Ready</p>
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="cordova.js"></script>
+<script src="js/index.js"></script>
+</body>
 </html>
