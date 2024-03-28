@@ -53,7 +53,7 @@ if (typeof jQuery == 'undefined') {
                 },
                 success: function (data, textStatus, jQxhr) {
                     console.log("in sign-in success");
-                    document.getElementById("text1").innerHTML = "Successful login. Token: " + data.token;
+                    // document.getElementById("text1").innerHTML = "Successful login. Token: " + data.token;
                     token = data.token;
                     retrieveBankInfo();
                 },
@@ -83,7 +83,7 @@ function retrieveBankInfo() {
         success: function (data) {
             console.log("in retrieve bank info success");
             console.log(data);
-            document.getElementById("text2").innerHTML = "Retrieve Bank Information  successful";
+            document.getElementById("text2").innerHTML = "Retrieve Bank Information successful";
         },
         error: function (jqXhr, textStatus, errorThrown) {
             console.log("in retrieve bank info error");
@@ -146,5 +146,5 @@ function fetchTransactions(accountId) {
                 console.log("Server response: " + jqXhr.responseText);
             }
         });
-    }, 2000);
+    }, 5000);
 }
