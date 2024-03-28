@@ -43,19 +43,33 @@ https://ssl.gstatic.com https://apisandbox.openbankproject.com 'unsafe-eval'; st
 </head>
 <body>
 <div class="app">
-    <h1>Financial Application</h1>
-    <div id="deviceready" class="blink">
-        <p class="event listening">Connecting to Device</p>
-        <p>
-            <button id="button1">Sign in</button>
-        <p id="text1"></p>
-        <button id="button2">Retrieve Bank User Data at gh.29.uk Bank</button>
-        <p id="text2"></p>
-        <button id="button3">Fetch List Accounts A User Holds At A Banks</button>
-        <p id="text3"></p>
-        <button id="button4">Fetch Bank with Account-Id of 1995</button>
-        <p id="text4"></p>
-        <p class="event received">The Device is Ready</p>
+    <div class="container">
+    <img src="img/logo.png" class="logo" />
+    <button id="button1" class="signIn">Sign in</button>
+    <div class="wrapper">
+        <h1 class="sub-h1">
+            Financial Application
+        </h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p id="text1"></p>
+            <div class="sub-wrapper">
+                <div class="wrap">
+                    <button id="button2">Retrieve Bank User Data at gh.29.uk Bank</button>
+                    <p id="text2"></p>
+                </div>
+                <div class="wrap">
+                    <button id="button3">Fetch List Accounts A User Holds At A Banks</button>
+                    <p id="text3"></p>
+                </div>
+                <div class="wrap">
+                    <button id="button4">Fetch Bank with Account-Id of 1995</button>
+                    <p id="text4"></p>
+                </div>
+            </div>
+            <p class="event received">The Device is Ready</p>
+        </div>
+    </div>
     </div>
 </div>
 
